@@ -104,7 +104,7 @@ const PROJECTS = [
     tech: ['Python', 'Streamlit'],
     github: 'https://github.com/GNikhila-92/FunnelFlux-Analytics',
     live: 'https://funnelflux-analytics-dygo6lxycsarqvucbdqcce.streamlit.app/',
-    images: [],
+    images: ['/funnelflux.png'], // Updated path pointing to your new screenshot
   },
   {
     title: 'Drone Simulator — Arcade Pilot',
@@ -121,7 +121,7 @@ const PROJECTS = [
     tech: ['JavaScript', 'Three.js', 'MediaPipe', 'HTML/CSS'],
     github: 'https://github.com/GNikhila-92/drone-simulator',
     live: 'https://gnikhila-92.github.io/drone-simulator/',
-    images: [],
+    images: ['/drone.png'], // Updated path pointing to your new screenshot
   },
   {
     title: 'Movie Streaming Analytics (SQL)',
@@ -138,7 +138,7 @@ const PROJECTS = [
     tech: ['Python', 'SQLite', 'Pandas', 'Seaborn', 'Plotly'],
     github: 'https://github.com/GNikhila-92/netflix-sql-streaming-analytics',
     live: null,
-    images: [],
+    images: ['/netflix-sql.png'], // Updated path pointing to your new screenshot
   },
 ];
 
@@ -378,15 +378,15 @@ function ProjectCard({ project, reverse }) {
     <div className="overflow-hidden rounded-2xl border border-stone-200 bg-white">
       <div className={`grid gap-0 md:grid-cols-2 ${reverse ? 'md:[direction:rtl]' : ''}`}>
         <div className="bg-stone-50 p-5 md:[direction:ltr]">
-          {project.images.length > 0 ? (
-            <div className="grid grid-cols-2 gap-2">
+          {project.images && project.images.length > 0 ? (
+            <div className="grid grid-cols-1 gap-2 h-full items-center justify-center">
               {project.images.map((src, i) => (
                 <img
                   key={src}
                   src={src}
                   alt={`${project.title} screenshot ${i + 1}`}
                   loading="lazy"
-                  className={`rounded-lg border border-stone-200 object-cover ${project.images.length === 1 ? 'col-span-2 aspect-video' : 'aspect-video'}`}
+                  className="rounded-lg border border-stone-200 object-cover aspect-video w-full"
                 />
               ))}
             </div>

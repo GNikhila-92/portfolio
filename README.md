@@ -1,65 +1,40 @@
-# G. Nikhila — Developer Portfolio
+# G. Nikhila | Data Science & Analytics Portfolio
 
-A React + Tailwind CSS portfolio built from real GitHub projects, for Data Analyst /
-Data Scientist Intern / Python Developer roles.
+Live Deployment: **[gnikhila-portfolio.vercel.app](https://gnikhila-portfolio.vercel.app)**
 
-## Run locally
+An interactive, production-ready developer portfolio engineered with **React**, **Vite**, and **Tailwind CSS**. This platform serves as a centralized hub showcasing data pipelines, productionized analytics dashboards, and software engineering projects mapped dynamically from live GitHub data. 
 
-```bash
-npm install
-npm run dev
-```
+Optimized for Data Analyst, Data Scientist Intern, and Python Developer positions.
 
-Open the URL Vite prints (usually http://localhost:5173).
+---
 
-## Build for production
+## 🛠️ Tech Stack & Architecture
 
-```bash
-npm run build
-```
+* **Frontend Framework:** React 18 (Functional Components, Hooks)
+* **Build Tooling:** Vite (Optimized asset bundling & Fast Refresh)
+* **Styling Engine:** Tailwind CSS (Utility-first, responsive grid architecture)
+* **Iconography:** Lucide React
+* **Hosting Pipeline:** Vercel Continuous Integration (CI/CD)
 
-Output goes to `dist/`.
+---
 
-## Deploy
+## 📊 Core Projects Showcased
 
-### Vercel
-1. Push this folder to a GitHub repo.
-2. Import the repo at vercel.com → New Project.
-3. Framework preset: **Vite**. No extra config needed.
+The dashboard aggregates performance metadata directly derived from the following core repositories:
+1. **Netflix Streaming Analytics Dashboard** — Multi-dimensional Streamlit application utilizing interactive geographic choropleths.
+2. **Global E-Commerce Sales Dashboard** — Executive-level Tableau Public transactional analysis detailing revenue performance across 540K+ rows.
+3. **FunnelFlux** — A modular Python journey tracking platform optimizing digital marketing conversions.
+4. **Drone Simulator** — A WebGL 3D graphics environment tracking human computer interface inputs via Google MediaPipe.
+5. **Movie Streaming Analytics (SQL)** — Advanced SQLite analytical layer executing window functions, relational aggregations, and custom weighted scoring matrices.
 
-### GitHub Pages
-1. `npm run build`
-2. In `vite.config.js`, set `base: '/your-repo-name/'`.
-3. Push the contents of `dist/` to a `gh-pages` branch (or use the
-   `gh-pages` npm package / a GitHub Action) and enable Pages on that branch
-   in repo Settings → Pages.
+---
 
-## Before you publish
+## 🌐 Deployment Configuration
 
-- **Resume:** drop your resume PDF into `public/resume.pdf` — the "Resume" and
-  "Download Resume" buttons already link to `/resume.pdf`.
-- **LinkedIn:** the resume didn't list a LinkedIn URL. Open `src/App.jsx` and
-  update `PROFILE.linkedin` with your real profile link.
-- **Missing screenshots:** `FunnelFlux`, `Drone Simulator`, and the
-  `Movie Streaming Analytics (SQL)` project don't have screenshots in their
-  GitHub repos yet, so they currently show a placeholder. Add images to
-  `public/` and update the `images` array for that project in
-  `src/App.jsx` (or add screenshots to the actual GitHub repos and swap in
-  the raw GitHub URL — that's what the other two projects use).
-
-## Stack
-
-- React 18 + Vite
-- Tailwind CSS
-- lucide-react icons
-
-## Project data
-
-All project descriptions, tech stacks, and links in `src/App.jsx` were taken
-directly from the README files of these public repositories:
-
-- github.com/GNikhila-92/netflix-streamlit-dashboard
-- github.com/GNikhila-92/Global-Ecommerce-Sales-Dashboard
-- github.com/GNikhila-92/FunnelFlux-Analytics
-- github.com/GNikhila-92/drone-simulator
-- github.com/GNikhila-92/netflix-sql-streaming-analytics
+### Continuous Deployment via Vercel (Recommended)
+This repository is configured to seamlessly run on Vercel's global edge network:
+1. Push your local codebase changes to your GitHub repository:
+   ```bash
+   git add .
+   git commit -m "chore: deployment preps"
+   git push origin main
